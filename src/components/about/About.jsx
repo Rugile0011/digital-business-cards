@@ -5,6 +5,11 @@ import {GiLightBackpack} from 'react-icons/gi'
 import {MdOutlineSchool} from 'react-icons/md'
 import {AiOutlineFundProjectionScreen} from 'react-icons/ai'
 
+import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 const About = () => {
     return (
         <section id='about'>
