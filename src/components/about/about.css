@@ -1,9 +1,15 @@
 .about__container {
     padding-top: 80px;
-    padding-left: 180px;
+    padding-left: 280px;
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
+}
+
+.about__container p {
+    position: absolute;
+    width: 45%;
+    right: 7%;
 }
 
 .about__me {
@@ -31,45 +37,34 @@
     transform: rotate(0);
 }
 
-.about__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+.card {
+    margin: 0 auto 0;
+    width: 400px;
+    height: 600px;
 }
 
-.about__card { 
-    background: var(--color-bg-variant);
-    border: 1px solid transparent;
-    border-radius: 16px;
-    padding: 32px;
+.card__inner {
+    width: 200px;
+    height: 350px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner.is-flipped {
+    transform: rotate(180deg);
+}
+
+.flippable-card-container {
+    right: 110px;
+    display: flex;
+    position: relative;
+    padding-top: 180px;
+}
+
+.about-title {
     text-align: center;
-    transition: var(--transition);
-}
-
-.about__card:hover {
-    background: transparent;
-    border-color: var(--color-primary-variant);
-    cursor: default;
-}
-
-.about__icon {
-    color: var(--color-primary);
-    font-size: 22px;
-    margin-bottom: 16px;
-}
-
-.about__card h5 {
-    font-size: 15px;
-}
-
-.about__card small {
-    font-size: 14px;
-    color: var(--color-light);
-}
-
-.about__content p {
-    margin: 32px 0 40px;
-    color: var(--color-light);
 }
 
 /* ================ MEDIA (MEDIUM DEVICE) ================ */
@@ -84,10 +79,6 @@
         width: 50%;
         margin: 32px auto 64px;
     }
-
-    .about__content p {
-        margin: 16px 0;
-    }
 }
 
 /* ================ MEDIA (SMALL DEVICE) ================ */
@@ -96,15 +87,6 @@
     .about__me {
         width: 65%;
         margin: 0 auto 43px;
-    }
-
-    .about__cards {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-    }
-
-    .about__content { 
-        text-align: center;
     }
 
     .about__container p {
